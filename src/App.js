@@ -14,12 +14,14 @@ import Nosotros from "./components/Nosotros"
 
 function App() {
   return (
+    // Router para hacer una Página dinamica (SPA)
     <Router>
       <div className="container">
 
         <h1>React Router</h1>
 
         <div className="btn-group">
+          {/* Link para cambiar la vista a un componente especifico */}
           <Link to="/" className="btn btn-dark">
             Inicio
           </Link>
@@ -32,9 +34,11 @@ function App() {
         </div>
 
         <hr/>
-
+        
+        {/* Switch es para colocar nuestros componetes dentro de la página */}
         <Switch>
 
+          {/* Route  para el componente que se va a mostrar */}
           <Route path="/" exact>
             <Inicio/>
           </Route>
