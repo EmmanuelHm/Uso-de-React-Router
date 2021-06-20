@@ -11,6 +11,7 @@ import {
 import Inicio from "./components/Inicio"
 import Contacto from "./components/Contacto"
 import Nosotros from "./components/Nosotros"
+import User from "./components/User"
 
 function App() {
   return (
@@ -39,8 +40,8 @@ function App() {
         <Switch>
 
           {/* Route  para el componente que se va a mostrar */}
-          <Route path="/" exact>
-            <Inicio/>
+          <Route path="/nosotros/:id">
+            <User/>
           </Route>
 
           <Route path="/contacto">
@@ -51,6 +52,9 @@ function App() {
             <Nosotros />
           </Route>
 
+          <Route path="/" exact>
+            <Inicio/>
+          </Route>
         </Switch>
 
 
